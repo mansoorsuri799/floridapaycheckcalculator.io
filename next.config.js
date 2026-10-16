@@ -103,6 +103,36 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/nfl-parlay-calculator',
+        destination: '/hourly-paycheck-calculator',
+        permanent: true,
+      },
+      {
+        source: '/moneyline-parlay-calculator',
+        destination: '/salary-paycheck-calculator',
+        permanent: true,
+      },
+      {
+        source: '/round-robin-calculator',
+        destination: '/biweekly-paycheck-calculator',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-calculate-parlay-odds',
+        destination: '/blog/how-florida-paycheck-taxes-work',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-is-a-parlay-bet',
+        destination: '/blog/does-florida-have-state-income-tax',
+        permanent: true,
+      },
+      {
+        source: '/blog/parlay-odds-explained',
+        destination: '/blog/florida-hourly-paycheck-explained',
+        permanent: true,
+      },
 
       // Legacy asset paths
       {

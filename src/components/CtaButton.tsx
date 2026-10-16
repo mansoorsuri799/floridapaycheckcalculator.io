@@ -39,7 +39,7 @@ const ICONS: Record<IconKind, React.ReactNode> = {
 };
 
 const baseClass =
-  'download-btn inline-flex items-center justify-center px-8 py-4 text-brand-deep font-semibold text-lg rounded-2xl border border-violet/50 bg-gradient-to-r from-violet to-teal hover:brightness-110 transition-all group shadow-[0_12px_28px_-14px_rgba(198,244,50,0.85)]';
+  'download-btn inline-flex items-center justify-center px-8 py-4 text-white font-semibold text-lg rounded-2xl border border-violet/40 bg-gradient-to-r from-violet to-pink-deep hover:brightness-110 transition-all group shadow-[0_12px_28px_-14px_rgba(255,122,47,0.85)]';
 
 function ButtonInner({
   children,
@@ -51,7 +51,7 @@ function ButtonInner({
   return (
     <>
       <span className="text-left leading-tight">{children}</span>
-      <span className="download-icon ml-3 inline-flex rounded-full bg-brand p-2 text-violet transition-transform group-hover:scale-110">
+      <span className="download-icon ml-3 inline-flex rounded-full bg-white/20 p-2 text-white transition-transform group-hover:scale-110">
         {ICONS[icon]}
       </span>
     </>

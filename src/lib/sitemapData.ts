@@ -12,7 +12,7 @@ export type SitemapPage = {
   images?: Array<{ loc: string; title: string; caption: string }>;
 };
 
-const LASTMOD = "2026-10-14";
+const LASTMOD = "2026-10-16";
 
 export const SITEMAP_PAGES: SitemapPage[] = [
   {
@@ -23,13 +23,13 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     images: [
       {
         loc: imageLoc("/android-chrome-512x512.png"),
-        title: "Parlay Calculator logo",
-        caption: "Brand mark for Parlay Calculator on parlaycalculator.net",
+        title: "Florida Paycheck Calculator logo",
+        caption: "Brand mark for Florida Paycheck Calculator on floridapaycheckcalculator.io",
       },
       {
-        loc: imageLoc("/parlay-calculator.webp"),
-        title: "Parlay Calculator tool",
-        caption: "Free parlay odds and payout calculator homepage",
+        loc: imageLoc("/florida-paycheck-calculator.webp"),
+        title: "Florida Paycheck Calculator tool",
+        caption: "Free Florida take-home pay calculator homepage",
       },
     ],
   },
@@ -40,9 +40,9 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     priority: 0.9,
     images: [
       {
-        loc: imageLoc("/parlay-calculator-1.webp"),
-        title: "Parlay Calculator features",
-        caption: "Odds formats, multi-leg tickets, and payout breakdown features",
+        loc: imageLoc("/florida-paycheck-calculator-1.webp"),
+        title: "Florida Paycheck Calculator features",
+        caption: "Hourly, salary, biweekly, and FICA breakdown features",
       },
     ],
   },
@@ -53,48 +53,48 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     priority: 0.9,
     images: [
       {
-        loc: imageLoc("/parlay-calculator-2.webp"),
-        title: "How Parlay Calculator works",
-        caption: "Steps to calculate combined parlay odds and payout",
+        loc: imageLoc("/florida-paycheck-calculator-2.webp"),
+        title: "How Florida Paycheck Calculator works",
+        caption: "Steps to estimate Florida take-home pay after federal tax and FICA",
       },
     ],
   },
   {
-    path: "/nfl-parlay-calculator",
+    path: "/hourly-paycheck-calculator",
     lastMod: LASTMOD,
     changeFreq: "weekly",
     priority: 0.95,
     images: [
       {
-        loc: imageLoc("/parlay-calculator-3.webp"),
-        title: "NFL Parlay Calculator",
-        caption: "Calculate NFL multi-leg parlays and payouts",
+        loc: imageLoc("/florida-paycheck-calculator-3.webp"),
+        title: "Florida Hourly Paycheck Calculator",
+        caption: "Convert hourly wages to Florida take-home pay",
       },
     ],
   },
   {
-    path: "/moneyline-parlay-calculator",
+    path: "/salary-paycheck-calculator",
     lastMod: LASTMOD,
     changeFreq: "weekly",
     priority: 0.95,
     images: [
       {
-        loc: imageLoc("/parlay-calculator-1.webp"),
-        title: "Moneyline Parlay Calculator",
-        caption: "Calculate moneyline parlay odds and winnings",
+        loc: imageLoc("/florida-paycheck-calculator-1.webp"),
+        title: "Florida Salary Paycheck Calculator",
+        caption: "Estimate salaried take-home pay in Florida",
       },
     ],
   },
   {
-    path: "/round-robin-calculator",
+    path: "/biweekly-paycheck-calculator",
     lastMod: LASTMOD,
     changeFreq: "weekly",
     priority: 0.95,
     images: [
       {
-        loc: imageLoc("/parlay-calculator-2.webp"),
-        title: "Round Robin Bet Calculator",
-        caption: "Calculate round robin parlay combinations and total stake",
+        loc: imageLoc("/florida-paycheck-calculator-2.webp"),
+        title: "Florida Biweekly Paycheck Calculator",
+        caption: "Estimate Florida biweekly net pay after taxes",
       },
     ],
   },
@@ -106,7 +106,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     images: [
       {
         loc: imageLoc("/android-chrome-512x512.png"),
-        title: "About Parlay Calculator",
+        title: "About Florida Paycheck Calculator",
         caption: "Brand logo used on the About page",
       },
     ],
@@ -118,41 +118,54 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     priority: 0.8,
   },
   {
-    path: "/blog/how-to-calculate-parlay-odds",
+    path: "/blog/does-florida-have-state-income-tax",
     lastMod: LASTMOD,
     changeFreq: "monthly",
     priority: 0.9,
     images: [
       {
-        loc: imageLoc("/parlay-calculator.webp"),
-        title: "How to calculate parlay odds",
-        caption: "Step-by-step guide to calculating parlay odds and payouts",
+        loc: imageLoc("/florida-paycheck-calculator.webp"),
+        title: "Does Florida have state income tax",
+        caption: "Guide explaining Florida zero state income tax and paycheck impact",
       },
     ],
   },
   {
-    path: "/blog/what-is-a-parlay-bet",
+    path: "/blog/how-florida-paycheck-taxes-work",
+    lastMod: LASTMOD,
+    changeFreq: "monthly",
+    priority: 0.9,
+    images: [
+      {
+        loc: imageLoc("/florida-paycheck-calculator-1.webp"),
+        title: "How Florida paycheck taxes work",
+        caption: "Federal withholding, FICA, and Florida paycheck deductions explained",
+      },
+    ],
+  },
+  {
+    path: "/blog/florida-hourly-paycheck-explained",
     lastMod: LASTMOD,
     changeFreq: "monthly",
     priority: 0.85,
     images: [
       {
-        loc: imageLoc("/parlay-calculator-1.webp"),
-        title: "What is a parlay bet",
-        caption: "Explanation of parlay bets, odds, and how they work",
+        loc: imageLoc("/florida-paycheck-calculator-3.webp"),
+        title: "Florida hourly paycheck explained",
+        caption: "How to turn hourly wages into Florida take-home pay",
       },
     ],
   },
   {
-    path: "/blog/parlay-odds-explained",
+    path: "/blog/how-401k-affects-florida-paycheck",
     lastMod: LASTMOD,
     changeFreq: "monthly",
     priority: 0.85,
     images: [
       {
-        loc: imageLoc("/parlay-calculator-2.webp"),
-        title: "Parlay odds explained",
-        caption: "How combined parlay odds and implied probability work",
+        loc: imageLoc("/florida-paycheck-calculator-2.webp"),
+        title: "How 401k affects Florida paycheck",
+        caption: "Pre-tax 401(k) contributions and Florida take-home pay",
       },
     ],
   },

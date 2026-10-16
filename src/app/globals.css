@@ -3,25 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 232, 240, 228;
-  --background-start-rgb: 8, 15, 28;
-  --background-end-rgb: 5, 10, 18;
-  --accent: #c6f432;
-  --brand: #080f1c;
-  --pink: #3ddc84;
-  --violet: #c6f432;
-  color-scheme: dark;
-  background-color: #080f1c;
+  --foreground-rgb: 28, 36, 52;
+  --background-start-rgb: 255, 247, 236;
+  --background-end-rgb: 255, 232, 208;
+  --accent: #ff7a2f;
+  --brand: #fff7ec;
+  --pink: #ff7a2f;
+  --violet: #ff7a2f;
+  --teal: #0e7490;
+  color-scheme: light;
+  background-color: #fff7ec;
 }
 
 html {
-  background-color: #080f1c;
+  background-color: #fff7ec;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #080f1c;
-  background: #080f1c;
+  background-color: #fff7ec;
+  background: #fff7ec;
 }
 
 img {
@@ -68,12 +69,12 @@ footer {
 }
 
 .site-atmosphere {
-  background-color: #080f1c;
+  background-color: #fff7ec;
   background-image:
-    radial-gradient(ellipse 90% 60% at 12% -10%, rgba(198, 244, 50, 0.18), transparent 55%),
-    radial-gradient(ellipse 80% 50% at 90% 0%, rgba(61, 220, 132, 0.16), transparent 52%),
-    radial-gradient(ellipse 70% 45% at 50% 110%, rgba(198, 244, 50, 0.1), transparent 55%),
-    linear-gradient(180deg, #0c1524 0%, #080f1c 40%, #050a12 100%);
+    radial-gradient(ellipse 90% 60% at 12% -10%, rgba(255, 122, 47, 0.18), transparent 55%),
+    radial-gradient(ellipse 80% 50% at 90% 0%, rgba(14, 116, 144, 0.12), transparent 52%),
+    radial-gradient(ellipse 70% 45% at 50% 110%, rgba(255, 122, 47, 0.1), transparent 55%),
+    linear-gradient(180deg, #fffaf3 0%, #fff7ec 40%, #ffe8d0 100%);
 }
 
 .hero-glow {
@@ -81,7 +82,7 @@ footer {
 }
 
 .brand-gradient-text {
-  background: linear-gradient(120deg, #d9f86a 0%, #3ddc84 45%, #c6f432 100%);
+  background: linear-gradient(120deg, #ff9a5c 0%, #ff7a2f 45%, #0e7490 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -101,17 +102,17 @@ a {
 .calc-input {
   width: 100%;
   border-radius: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(5, 10, 18, 0.8);
+  border: 1px solid rgba(28, 36, 52, 0.15);
+  background: #ffffff;
   padding: 0.625rem 0.75rem;
-  color: #fff;
+  color: #1c2434;
   outline: none;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .calc-input:focus {
-  border-color: rgba(198, 244, 50, 0.6);
-  box-shadow: 0 0 0 1px rgba(198, 244, 50, 0.35);
+  border-color: rgba(255, 122, 47, 0.7);
+  box-shadow: 0 0 0 1px rgba(255, 122, 47, 0.35);
 }
 
 .calc-label {
@@ -121,5 +122,5 @@ a {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(28, 36, 52, 0.55);
 }

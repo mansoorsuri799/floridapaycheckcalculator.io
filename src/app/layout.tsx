@@ -39,7 +39,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: "#080F1C",
+  themeColor: "#FF7A2F",
   viewportFit: "cover",
   interactiveWidget: "resizes-visual",
 };
@@ -47,20 +47,20 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
   title: {
-    default: "Free Parlay Calculator — Odds & Payout",
+    default: "Florida Paycheck Calculator — Free Take-Home Pay",
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_TAGLINE,
   keywords: [
-    "parlay calculator",
-    "parlay odds calculator",
-    "parlay payout calculator",
-    "parlay bet calculator",
-    "moneyline parlay calculator",
-    "nfl parlay calculator",
-    "round robin bet calculator",
-    "how to calculate parlay odds",
-    "odds calculator parlay",
+    "florida paycheck calculator",
+    "florida take home pay calculator",
+    "florida hourly paycheck calculator",
+    "florida salary paycheck calculator",
+    "florida biweekly paycheck calculator",
+    "florida payroll calculator",
+    "florida no state income tax",
+    "florida FICA paycheck",
+    "florida net pay calculator",
   ],
   authors: [{ name: `${SITE_NAME} Team` }],
   creator: SITE_NAME,
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     canonical: SITE_ORIGIN,
   },
   openGraph: {
-    title: "Free Parlay Calculator — Odds & Payout",
+    title: "Florida Paycheck Calculator — Free Take-Home Pay",
     description: SITE_TAGLINE,
     url: SITE_ORIGIN,
     siteName: SITE_NAME,
@@ -103,26 +103,26 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Parlay Calculator — free sports betting odds and payout tool",
+        alt: "Florida Paycheck Calculator — free take-home pay estimator",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Parlay Calculator — Odds & Payout",
+    title: "Florida Paycheck Calculator — Free Take-Home Pay",
     description: SITE_TAGLINE,
     images: [
       {
         url: TWITTER_IMAGE,
         width: 1200,
         height: 600,
-        alt: "Parlay Calculator — free sports betting odds and payout tool",
+        alt: "Florida Paycheck Calculator — free take-home pay estimator",
       },
     ],
   },
   applicationName: SITE_NAME,
   category: "Finance",
-  classification: "Sports Betting Calculator",
+  classification: "Paycheck Calculator",
 };
 
 export default function RootLayout({
@@ -135,16 +135,16 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       className={`${outfit.variable} ${sora.variable}`}
-      style={{ backgroundColor: "#080F1C", colorScheme: "dark" }}
+      style={{ backgroundColor: "#FFF7EC", colorScheme: "light" }}
     >
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="theme-color" content="#080F1C" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="theme-color" content="#FF7A2F" />
         <style
           dangerouslySetInnerHTML={{
             __html:
-              "html,body{background-color:#080F1C!important;color-scheme:dark}#__next,main{background-color:transparent}",
+              "html,body{background-color:#FFF7EC!important;color-scheme:light}#__next,main{background-color:transparent}",
           }}
         />
         <link rel="icon" href={`/favicon.ico?v=${ASSET_VERSION}`} type="image/x-icon" sizes="48x48" />
@@ -161,7 +161,7 @@ export default function RootLayout({
       </head>
       <body
         className="font-sans antialiased text-ink min-h-screen flex flex-col bg-brand site-atmosphere"
-        style={{ backgroundColor: "#080F1C" }}
+        style={{ backgroundColor: "#FFF7EC" }}
         suppressHydrationWarning
       >
         <MobileMenuProvider>

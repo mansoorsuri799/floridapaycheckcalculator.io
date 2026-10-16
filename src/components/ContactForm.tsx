@@ -32,44 +32,40 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="border border-white/10 bg-white/5 p-6 md:p-8">
-      <h2 className="mb-6 text-center font-display text-2xl font-bold text-white">Send Us a Message</h2>
+    <div className="border border-ink/10 bg-white/80 p-6 md:p-8">
+      <h2 className="mb-6 text-center font-display text-2xl font-bold text-ink">Send Us a Message</h2>
 
       {formSubmitted ? (
-        <div className="mb-6 border border-teal/40 bg-teal/10 p-4 text-center text-white">
+        <div className="mb-6 border border-teal/40 bg-teal/10 p-4 text-center text-ink">
           <p>Thank you for your message. We&apos;ll get back to you soon!</p>
         </div>
       ) : null}
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
-          <label htmlFor="name" className="mb-1 block text-sm font-medium text-white/85">
+          <label htmlFor="name" className="mb-1 block text-sm font-medium text-ink/80">
             Your Name
           </label>
           <input
             id="name"
             type="text"
-            className={`w-full rounded-md border bg-brand-soft px-4 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-violet ${
-              errors.name ? 'border-pink' : 'border-white/15'
-            }`}
-            placeholder="Alex Creator"
+            className={`calc-input ${errors.name ? 'border-pink' : ''}`}
+            placeholder="Alex Rivera"
             {...register('name', { required: 'Name is required' })}
           />
           {errors.name && (
-            <p className="mt-1 text-sm text-pink-soft">{errors.name.message}</p>
+            <p className="mt-1 text-sm text-pink-deep">{errors.name.message}</p>
           )}
         </div>
 
         <div>
-          <label htmlFor="email" className="mb-1 block text-sm font-medium text-white/85">
+          <label htmlFor="email" className="mb-1 block text-sm font-medium text-ink/80">
             Email Address
           </label>
           <input
             id="email"
             type="email"
-            className={`w-full rounded-md border bg-brand-soft px-4 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-violet ${
-              errors.email ? 'border-pink' : 'border-white/15'
-            }`}
+            className={`calc-input ${errors.email ? 'border-pink' : ''}`}
             placeholder="alex@example.com"
             {...register('email', {
               required: 'Email is required',
@@ -80,55 +76,45 @@ export default function ContactForm() {
             })}
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-pink-soft">{errors.email.message}</p>
+            <p className="mt-1 text-sm text-pink-deep">{errors.email.message}</p>
           )}
         </div>
 
         <div>
-          <label htmlFor="subject" className="mb-1 block text-sm font-medium text-white/85">
+          <label htmlFor="subject" className="mb-1 block text-sm font-medium text-ink/80">
             Subject
           </label>
           <input
             id="subject"
             type="text"
-            className={`w-full rounded-md border bg-brand-soft px-4 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-violet ${
-              errors.subject ? 'border-pink' : 'border-white/15'
-            }`}
-            placeholder="How can we help?"
+            className={`calc-input ${errors.subject ? 'border-pink' : ''}`}
+            placeholder="Calculator feedback"
             {...register('subject', { required: 'Subject is required' })}
           />
           {errors.subject && (
-            <p className="mt-1 text-sm text-pink-soft">{errors.subject.message}</p>
+            <p className="mt-1 text-sm text-pink-deep">{errors.subject.message}</p>
           )}
         </div>
 
         <div>
-          <label htmlFor="message" className="mb-1 block text-sm font-medium text-white/85">
+          <label htmlFor="message" className="mb-1 block text-sm font-medium text-ink/80">
             Message
           </label>
           <textarea
             id="message"
             rows={5}
-            className={`w-full rounded-md border bg-brand-soft px-4 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-violet ${
-              errors.message ? 'border-pink' : 'border-white/15'
-            }`}
-            placeholder="Your message here..."
-            {...register('message', {
-              required: 'Message is required',
-              minLength: {
-                value: 10,
-                message: 'Message must be at least 10 characters',
-              },
-            })}
+            className={`calc-input ${errors.message ? 'border-pink' : ''}`}
+            placeholder="How can we help?"
+            {...register('message', { required: 'Message is required' })}
           />
           {errors.message && (
-            <p className="mt-1 text-sm text-pink-soft">{errors.message.message}</p>
+            <p className="mt-1 text-sm text-pink-deep">{errors.message.message}</p>
           )}
         </div>
 
         <div className="flex justify-center">
-          <CtaButton as="button" type="submit" icon="mail">
-            Send Message
+          <CtaButton as="button" type="submit" ariaLabel="Send message" icon="mail">
+            SEND MESSAGE
           </CtaButton>
         </div>
       </form>

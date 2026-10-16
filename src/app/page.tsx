@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import FaqSection from "@/components/FaqSection";
 import CtaButton from "@/components/CtaButton";
-import ParlayCalculator from "@/components/ParlayCalculator";
+import PaycheckCalculator from "@/components/PaycheckCalculator";
 import { WEB_APPLICATION_JSON_LD } from "@/lib/appFacts";
 import { imageObjectLicensing } from "@/lib/schemaImageLicensing";
 import {
@@ -19,16 +19,16 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    default: "Free Parlay Calculator — Odds & Payout",
+    default: "Florida Paycheck Calculator — Free Take-Home Pay",
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Free parlay calculator for sports betting. Convert American, decimal, or fractional odds, build multi-leg tickets, and see exact profit and payout instantly.",
+    "Free Florida paycheck calculator for hourly or salary pay. Estimate take-home pay after federal tax and FICA. Florida has no state income tax and no local wage tax.",
   alternates: { canonical: SITE_ORIGIN },
   openGraph: {
-    title: "Free Parlay Calculator — Odds & Payout",
+    title: "Florida Paycheck Calculator — Free Take-Home Pay",
     description:
-      "Calculate parlay odds and payouts in seconds. American, decimal, and fractional formats supported.",
+      "Estimate Florida net pay for salary or hourly jobs. Biweekly, weekly, and monthly frequencies supported.",
     url: SITE_ORIGIN,
     siteName: SITE_NAME,
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Parlay Calculator homepage — free odds and payout tool",
+        alt: "Florida Paycheck Calculator homepage — free take-home pay tool",
       },
     ],
   },
@@ -45,39 +45,39 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "What is a parlay calculator?",
+    question: "What is a Florida paycheck calculator?",
     answer:
-      "A parlay calculator multiplies the decimal odds of every leg in your ticket, then applies your stake to show combined odds, profit, and total payout. Parlay Calculator does that math for American, decimal, and fractional odds.",
+      "A Florida paycheck calculator estimates your take-home (net) pay from gross wages after federal income tax withholding and FICA (Social Security and Medicare). Because Florida has no state income tax and no local wage tax, those lines stay at $0.",
   },
   {
-    question: "How do I calculate a parlay payout?",
+    question: "Does Florida have state income tax on paychecks?",
     answer:
-      "Convert each leg to decimal odds, multiply them together, then multiply by your stake. For example, three −110 legs are about 1.909 × 1.909 × 1.909 ≈ 6.97, so a $100 stake returns roughly $697 total. Use the tool above or our how-to guide for worked examples.",
+      "No. Florida does not levy a personal state income tax, and Florida cities do not add local income taxes on wages. Your paycheck still has federal withholding and FICA. See our guide on whether Florida has state income tax for details.",
   },
   {
-    question: "How do parlay odds work?",
+    question: "What taxes come out of a Florida paycheck?",
     answer:
-      "Parlay odds are multiplicative. Each leg’s decimal price is multiplied by the next. That raises the payout and lowers the chance every selection wins. Our parlay odds calculator shows both the combined American price and implied win probability.",
+      "Typical employee deductions include federal income tax (based on W-4 and filing status), Social Security at 6.2% up to the annual wage base, and Medicare at 1.45% (plus Additional Medicare Tax for high earners). Optional pre-tax items like 401(k), HSA, and medical premiums reduce taxable wages.",
   },
   {
-    question: "Does this parlay odds calculator support moneyline bets?",
+    question: "Can I use this for hourly and salary pay?",
     answer:
-      "Yes. Enter each moneyline in American format (like −150 or +180), switch formats if needed, and the calculator returns the combined moneyline parlay price and payout.",
+      "Yes. Switch between salary and hourly modes. Hourly mode annualizes rate × hours × 52, then splits by your pay frequency. Dedicated pages cover Florida hourly, salary, and biweekly paycheck calculators.",
   },
   {
-    question: "What is the difference between a parlay and a round robin?",
+    question: "How accurate is this Florida take-home pay estimate?",
     answer:
-      "A parlay is one all-or-nothing ticket. A round robin builds every smaller parlay combination from your picks, so one loss does not wipe the entire stake. Use our round robin bet calculator for combo counts and total risk.",
+      "It uses approximate 2026 federal brackets, standard deduction, and FICA rates for educational estimates. Employer payroll software uses IRS withholding tables, year-to-date wages, and your exact W-4. Treat results as a planning guide—not a pay stub replacement.",
   },
   {
-    question: "Can I use this for NFL parlays?",
+    question: "What pay frequencies are supported?",
     answer:
-      "Absolutely. Build any NFL (or NBA, MLB, soccer) multi-leg ticket here, or open the dedicated NFL parlay calculator page for football-focused examples and links.",
+      "Weekly, biweekly (every two weeks), semi-monthly (twice a month), monthly, and annual. Biweekly is the most common search for Florida employees who want net pay per check.",
   },
   {
-    question: "Is this parlay bet calculator free?",
+    question: "Is this Florida paycheck calculator free?",
     answer:
-      "Yes. The full parlay payout calculator is free on parlaycalculator.net — no account required. It is an educational odds tool, not a sportsbook.",
+      "Yes. The full tool on floridapaycheckcalculator.io is free, with no account required. It is an educational estimator, not a payroll service or tax filing product.",
   },
 ];
 
@@ -91,7 +91,7 @@ export default function Home() {
         url: `${SITE_ORIGIN}/`,
         name: SITE_NAME,
         description:
-          "Free parlay calculator for sports betting odds, payouts, and multi-leg tickets.",
+          "Free Florida paycheck calculator for take-home pay after federal tax and FICA.",
         inLanguage: "en-US",
         publisher: { "@id": `${SITE_ORIGIN}/#organization` },
       },
@@ -99,7 +99,7 @@ export default function Home() {
         "@type": "WebPage",
         "@id": `${SITE_ORIGIN}/#webpage`,
         url: `${SITE_ORIGIN}/`,
-        name: "Free Parlay Calculator — Odds & Payout",
+        name: "Florida Paycheck Calculator — Free Take-Home Pay",
         isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
         primaryImageOfPage: {
           "@type": "ImageObject",
@@ -113,32 +113,32 @@ export default function Home() {
         ...WEB_APPLICATION_JSON_LD,
         "@id": `${SITE_ORIGIN}/#software`,
         description:
-          "Web-based parlay odds and payout calculator with American, decimal, and fractional formats.",
+          "Web-based Florida paycheck calculator for hourly and salary take-home pay estimates.",
       },
       {
         "@type": "HowTo",
-        name: "How to use the free parlay calculator",
-        description: "Build a multi-leg ticket and calculate payout in four steps.",
+        name: "How to use the Florida paycheck calculator",
+        description: "Estimate Florida take-home pay in four steps.",
         step: [
           {
             "@type": "HowToStep",
-            name: "Choose odds format",
-            text: "Select American, decimal, or fractional odds to match your sportsbook slip.",
+            name: "Choose salary or hourly",
+            text: "Select pay type and enter annual salary or hourly rate and hours per week.",
           },
           {
             "@type": "HowToStep",
-            name: "Enter your stake",
-            text: "Type the amount you plan to wager on the full parlay.",
+            name: "Set pay frequency",
+            text: "Pick weekly, biweekly, semi-monthly, monthly, or annually to match your pay stubs.",
           },
           {
             "@type": "HowToStep",
-            name: "Add each leg",
-            text: "Enter the odds for every selection. Add or remove legs as needed.",
+            name: "Add filing status and deductions",
+            text: "Choose federal filing status and optional pre-tax or post-tax deductions.",
           },
           {
             "@type": "HowToStep",
-            name: "Read the payout",
-            text: "See combined odds, profit, total payout, and implied win probability instantly.",
+            name: "Read net pay",
+            text: "See gross, federal tax, Social Security, Medicare, $0 Florida state tax, and take-home pay.",
           },
         ],
       },
@@ -173,19 +173,19 @@ export default function Home() {
           <h1 className="mb-2 font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             <span className="brand-gradient-text">{SITE_NAME}</span>
           </h1>
-          <p className="mb-6 max-w-2xl font-display text-lg font-semibold leading-snug text-white sm:text-xl md:text-2xl">
-            Calculate parlay odds and payout before you lock the ticket
+          <p className="mb-6 max-w-2xl font-display text-lg font-semibold leading-snug text-ink sm:text-xl md:text-2xl">
+            Estimate Florida take-home pay after federal tax — with $0 state income tax
           </p>
 
-          <ParlayCalculator showLabels={false} defaultLegs={["-110", "-110", "-110"]} />
+          <PaycheckCalculator defaultFrequency="biweekly" />
 
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-            Free parlay odds calculator for American, decimal, and fractional prices — built for
-            moneyline, spread, and total parlays across NFL and every major sport.
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink/75 sm:text-lg">
+            Free Florida payroll-style estimator for hourly or salaried employees. Model weekly,
+            biweekly, and monthly checks with FICA and federal withholding built in.
           </p>
 
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-            <div className="flex flex-wrap items-center gap-2 text-sm text-white/70 sm:gap-3">
+            <div className="flex flex-wrap items-center gap-2 text-sm text-ink/65 sm:gap-3">
               <span
                 className="inline-flex items-center gap-1.5"
                 aria-label={`Rated ${SITE_RATING.ratingValue} out of 5`}
@@ -196,18 +196,18 @@ export default function Home() {
                 </span>
                 <span>({Number(SITE_RATING.ratingCount).toLocaleString()})</span>
               </span>
-              <span className="text-white/40">·</span>
+              <span className="text-ink/30">·</span>
               <span>Free</span>
-              <span className="text-white/40">·</span>
+              <span className="text-ink/30">·</span>
               <span>Web</span>
-              <span className="text-white/40">·</span>
-              <span>Sports betting tool</span>
+              <span className="text-ink/30">·</span>
+              <span>Paycheck tool</span>
             </div>
             <Link
               href="/how-it-works"
-              className="text-sm font-semibold text-violet-soft underline-offset-4 hover:underline"
+              className="text-sm font-semibold text-violet underline-offset-4 hover:underline"
             >
-              See how the math works →
+              See how the estimate works →
             </Link>
           </div>
         </div>
@@ -215,113 +215,116 @@ export default function Home() {
 
       <div className="container mx-auto max-w-6xl px-4 py-12">
         <section className="mb-16 max-w-3xl">
-          <h2 className="mb-4 font-display text-2xl font-bold text-white md:text-3xl">
-            Free parlay odds calculator for sports betting
+          <h2 className="mb-4 font-display text-2xl font-bold text-ink md:text-3xl">
+            Free Florida paycheck calculator for take-home pay
           </h2>
-          <p className="mb-4 text-lg leading-relaxed text-white/80">
-            A <strong className="text-white">parlay odds calculator</strong> converts every leg on
-            your ticket into one combined price, then scales that price by your stake. Bettors use
-            it before locking a slip so they know profit, total payout, and how unlikely a long
-            multi-leg ticket really is. This free tool supports American, decimal, and fractional
-            formats — the same prices U.S. and international sportsbooks display.
+          <p className="mb-4 text-lg leading-relaxed text-ink/80">
+            A <strong className="text-ink">Florida paycheck calculator</strong> answers one
+            practical question: after taxes and deductions, how much lands in your bank account?
+            Workers in Miami, Orlando, Tampa, Jacksonville, and every other Florida city share the
+            same big advantage—no state income tax—yet federal withholding and FICA still reduce
+            gross pay. This free tool models that reality without a payroll login or sales pitch.
           </p>
-          <p className="leading-relaxed text-white/75">
-            Whether you searched for a parlay payout calculator, a parlay bet calculator, or an odds
-            calculator for parlays, the workflow is the same: enter stake, add legs, read combined
-            odds. No account. No sportsbook soft-sell. Just clear math you can compare to the number
-            on your bet slip.
+          <p className="leading-relaxed text-ink/75">
+            Whether you searched for a Florida take-home pay calculator, Florida payroll
+            calculator, or Florida net pay estimator, the workflow is the same: enter wages, choose
+            pay frequency and filing status, optionally add 401(k) or benefits, then read gross vs.
+            net. No account required.
           </p>
         </section>
 
         <section className="mb-16">
-          <h2 className="mb-4 font-display text-2xl font-bold text-white md:text-3xl">
-            How to calculate parlay odds
+          <h2 className="mb-4 font-display text-2xl font-bold text-ink md:text-3xl">
+            How Florida paycheck taxes work
           </h2>
-          <p className="mb-6 max-w-3xl leading-relaxed text-white/80">
-            People also ask{" "}
+          <p className="mb-6 max-w-3xl leading-relaxed text-ink/80">
+            People also ask what comes out of a Florida paycheck. Unlike many states, Florida does
+            not stack a state income tax on top of federal rules. Use our deep guide on{" "}
             <Link
-              href="/blog/how-to-calculate-parlay-odds"
-              className="text-violet-soft underline hover:no-underline"
+              href="/blog/how-florida-paycheck-taxes-work"
+              className="text-violet underline hover:no-underline"
             >
-              how to calculate parlay odds
+              how Florida paycheck taxes work
             </Link>{" "}
-            by hand. The formula behind every parlay calculator is straightforward once prices are
-            in decimal form.
+            or the quick map below.
           </p>
           <ol className="mb-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 n: "01",
-                t: "Convert each leg",
-                d: "American −110 ≈ 1.909 decimal. +150 = 2.50. Fractional 5/2 = 3.50.",
+                t: "Start with gross pay",
+                d: "Salary ÷ periods, or hourly rate × hours annualized, then split by pay frequency.",
               },
               {
                 n: "02",
-                t: "Multiply the decimals",
-                d: "Combined odds = d₁ × d₂ × d₃ × … for every leg on the ticket.",
+                t: "Subtract pre-tax items",
+                d: "401(k), HSA, FSA, and some medical premiums lower federal taxable wages.",
               },
               {
                 n: "03",
-                t: "Apply your stake",
-                d: "Total payout = stake × combined decimal. Profit = payout − stake.",
+                t: "Apply federal + FICA",
+                d: "Federal income tax (brackets + standard deduction estimate), Social Security 6.2%, Medicare 1.45%.",
               },
               {
                 n: "04",
-                t: "Check win probability",
-                d: "Implied probability ≈ 1 ÷ combined decimal — a reality check before you stack.",
+                t: "Florida state & local = $0",
+                d: "No Florida personal income tax and no city wage tax — a clean line on your stub.",
               },
             ].map((step) => (
               <li key={step.n} className="border-t border-violet/40 pt-4">
                 <span className="font-display text-sm font-bold text-teal">{step.n}</span>
-                <h3 className="mt-2 font-display text-xl font-semibold text-white">{step.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/70">{step.d}</p>
+                <h3 className="mt-2 font-display text-xl font-semibold text-ink">{step.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink/70">{step.d}</p>
               </li>
             ))}
           </ol>
-          <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
-            <h3 className="mb-2 font-display text-lg font-semibold text-white">
-              Example: 3-leg parlay at −110
+          <div className="rounded-xl border border-ink/10 bg-white/70 p-5 sm:p-6">
+            <h3 className="mb-2 font-display text-lg font-semibold text-ink">
+              Example: $75,000 salary, biweekly, single
             </h3>
-            <p className="leading-relaxed text-white/75">
-              Three −110 spreads → 1.909 × 1.909 × 1.909 ≈ <strong className="text-white">6.96</strong>{" "}
-              decimal (about <strong className="text-violet">+596</strong> American). A $100 stake
-              returns roughly <strong className="text-white">$696</strong> total and about{" "}
-              <strong className="text-teal">$596</strong> profit if every leg hits. Enter the same
-              numbers in the calculator above to verify in one click.
+            <p className="leading-relaxed text-ink/75">
+              Gross per check is about <strong className="text-ink">$2,884.62</strong> ($75,000 ÷
+              26). After approximate federal income tax and FICA—with Florida state tax at{" "}
+              <strong className="text-violet">$0</strong>—take-home is typically in the low-to-mid
+              $2,000s depending on W-4 and deductions. Enter the same numbers above to see a live
+              breakdown.
             </p>
           </div>
         </section>
 
         <section className="mb-16 grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <h2 className="mb-4 font-display text-2xl font-bold text-white md:text-3xl">
-              Parlay payout calculator: stake, profit, and total return
+            <h2 className="mb-4 font-display text-2xl font-bold text-ink md:text-3xl">
+              Florida has no state income tax — what that means on your stub
             </h2>
-            <p className="mb-4 leading-relaxed text-white/80">
-              A payout-focused view answers the question most bettors care about: “If this hits,
-              what do I collect?” Change the stake field and the results panel updates profit and
-              total payout instantly — useful when you are comparing a $10 flyer to a $50 ticket or
-              testing a boosted promotion price.
+            <p className="mb-4 leading-relaxed text-ink/80">
+              One of the most searched Florida paycheck topics is whether the state taxes wages.
+              Florida does not. That keeps more of each dollar compared with high-tax states, but it
+              does not mean paychecks arrive tax-free. Federal income tax and FICA still apply, and
+              Additional Medicare Tax can hit high earners.
             </p>
-            <ul className="space-y-3 text-white/80">
+            <ul className="space-y-3 text-ink/80">
               <li>
-                <strong className="text-white">Combined American odds</strong> — the headline price
-                most U.S. books show on the slip.
+                <strong className="text-ink">State income tax:</strong> 0%
               </li>
               <li>
-                <strong className="text-white">Combined decimal odds</strong> — the clean multiplier
-                used under the hood.
+                <strong className="text-ink">Local income / wage tax:</strong> 0%
               </li>
               <li>
-                <strong className="text-white">Implied win probability</strong> — how often the ticket
-                would need to cash at that price.
+                <strong className="text-ink">Federal + FICA:</strong> still withheld each pay period
               </li>
             </ul>
+            <p className="mt-4 text-sm text-ink/70">
+              Full explainer:{" "}
+              <Link href="/blog/does-florida-have-state-income-tax" className="text-violet underline">
+                Does Florida have state income tax?
+              </Link>
+            </p>
           </div>
-          <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10">
+          <div className="relative aspect-video overflow-hidden rounded-2xl border border-ink/10">
             <Image
               src={BRAND_FEATURE_2}
-              alt="Parlay payout calculator results showing combined odds profit and total return"
+              alt="Florida paycheck calculator showing take-home pay with zero state income tax"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               quality={70}
@@ -331,39 +334,39 @@ export default function Home() {
         </section>
 
         <section className="mb-16">
-          <h2 className="mb-4 font-display text-2xl font-bold text-white md:text-3xl">
-            Build moneyline, NFL, and multi-sport parlays
+          <h2 className="mb-4 font-display text-2xl font-bold text-ink md:text-3xl">
+            Hourly, salary, and biweekly Florida paycheck tools
           </h2>
-          <p className="mb-8 max-w-3xl leading-relaxed text-white/80">
-            The same parlay builder handles spreads, totals, props, and moneylines. Use dedicated
-            landers when you want sport- or bet-type context — they all run on this core odds engine.
+          <p className="mb-8 max-w-3xl leading-relaxed text-ink/80">
+            Search demand clusters around hourly wages, salaried jobs, and biweekly pay cycles. Use
+            the hub calculator above or open a focused lander for the intent you care about.
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                href: "/moneyline-parlay-calculator",
-                title: "Moneyline parlay calculator",
-                body: "Stack straight-up winners with American ML prices — favorites and underdogs on one ticket.",
+                href: "/hourly-paycheck-calculator",
+                title: "Florida hourly paycheck calculator",
+                body: "Convert hourly rate and hours into weekly, biweekly, or monthly take-home pay.",
               },
               {
-                href: "/nfl-parlay-calculator",
-                title: "NFL parlay calculator",
-                body: "Price Sunday cards, same-game custom quotes, and multi-game football parlays before kickoff.",
+                href: "/salary-paycheck-calculator",
+                title: "Florida salary paycheck calculator",
+                body: "Split annual salary into per-check gross and net with federal tax and FICA.",
               },
               {
-                href: "/round-robin-calculator",
-                title: "Round robin bet calculator",
-                body: "Turn selections into every 2-leg or 3-leg combo with ticket count and total stake.",
+                href: "/biweekly-paycheck-calculator",
+                title: "Florida biweekly paycheck calculator",
+                body: "Model the common 26-pay-period schedule Florida employers use.",
               },
             ].map((card) => (
               <Link
                 key={card.href}
                 href={card.href}
-                className="block border border-white/10 bg-white/[0.03] p-5 transition hover:border-violet/40"
+                className="block border border-ink/10 bg-white/70 p-5 transition hover:border-violet/40"
               >
-                <h3 className="mb-2 font-display text-lg font-semibold text-white">{card.title}</h3>
-                <p className="text-sm leading-relaxed text-white/70">{card.body}</p>
-                <span className="mt-3 inline-block text-sm font-semibold text-violet-soft">
+                <h3 className="mb-2 font-display text-lg font-semibold text-ink">{card.title}</h3>
+                <p className="text-sm leading-relaxed text-ink/70">{card.body}</p>
+                <span className="mt-3 inline-block text-sm font-semibold text-violet">
                   Open tool →
                 </span>
               </Link>
@@ -372,45 +375,46 @@ export default function Home() {
         </section>
 
         <section className="mb-16 max-w-3xl">
-          <h2 className="mb-4 font-display text-2xl font-bold text-white md:text-3xl">
-            American, decimal, and fractional parlay odds
+          <h2 className="mb-4 font-display text-2xl font-bold text-ink md:text-3xl">
+            FICA, federal withholding, and pre-tax deductions
           </h2>
-          <p className="mb-4 leading-relaxed text-white/80">
-            Searchers often type “odds calculator parlay” or “parlay calculator odds” when they need
-            format help. Switch the toggle above the legs to match your book:
-          </p>
-          <ul className="mb-4 list-disc space-y-2 pl-5 text-white/75">
-            <li>
-              <strong className="text-white">American</strong> — −110, +150 (default for U.S.
-              sportsbooks)
-            </li>
-            <li>
-              <strong className="text-white">Decimal</strong> — 1.91, 2.50 (common in Canada, Europe,
-              Australia)
-            </li>
-            <li>
-              <strong className="text-white">Fractional</strong> — 10/11, 3/2 (UK-style prices)
-            </li>
-          </ul>
-          <p className="leading-relaxed text-white/75">
-            Mixed slips still work: convert everything to decimal, multiply, then read payout. For a
-            deeper walkthrough of combined prices and juice, read{" "}
-            <Link href="/blog/parlay-odds-explained" className="text-violet-soft underline">
-              parlay odds explained
-            </Link>
-            . New to parlays? Start with{" "}
-            <Link href="/blog/what-is-a-parlay-bet" className="text-violet-soft underline">
-              what is a parlay bet
+          <p className="mb-4 leading-relaxed text-ink/80">
+            Even with $0 Florida state tax, Social Security and Medicare are mandatory for most W-2
+            employees. Pre-tax 401(k) and health contributions can reduce taxable wages and change
+            net pay — explore{" "}
+            <Link href="/blog/how-401k-affects-florida-paycheck" className="text-violet underline">
+              how a 401(k) affects a Florida paycheck
             </Link>
             .
+          </p>
+          <ul className="mb-4 list-disc space-y-2 pl-5 text-ink/75">
+            <li>
+              <strong className="text-ink">Social Security</strong> — 6.2% employee share up to the
+              annual wage base
+            </li>
+            <li>
+              <strong className="text-ink">Medicare</strong> — 1.45% employee share (Additional
+              Medicare Tax may apply above IRS thresholds)
+            </li>
+            <li>
+              <strong className="text-ink">Federal income tax</strong> — estimated from filing status,
+              standard deduction, and brackets
+            </li>
+          </ul>
+          <p className="leading-relaxed text-ink/75">
+            Hourly workers can also read{" "}
+            <Link href="/blog/florida-hourly-paycheck-explained" className="text-violet underline">
+              Florida hourly paycheck explained
+            </Link>{" "}
+            for overtime and hours-to-net examples.
           </p>
         </section>
 
         <section className="mb-16 grid gap-10 md:grid-cols-2 md:items-center">
-          <div className="relative order-2 aspect-video overflow-hidden rounded-2xl border border-white/10 md:order-1">
+          <div className="relative order-2 aspect-video overflow-hidden rounded-2xl border border-ink/10 md:order-1">
             <Image
               src={BRAND_FEATURE_3}
-              alt="Parlay builder with multiple sports betting legs and odds formats"
+              alt="Florida paycheck breakdown with federal tax FICA and take-home pay"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               quality={70}
@@ -418,61 +422,81 @@ export default function Home() {
             />
           </div>
           <div className="order-1 md:order-2">
-            <h2 className="mb-4 font-display text-2xl font-bold text-white md:text-3xl">
-              Why use this free parlay bet calculator
+            <h2 className="mb-4 font-display text-2xl font-bold text-ink md:text-3xl">
+              Why use this free Florida paycheck calculator
             </h2>
-            <ul className="space-y-4 text-white/80">
+            <ul className="space-y-4 text-ink/80">
               <li>
-                <h3 className="mb-1 font-display text-lg font-semibold text-white">
-                  No sportsbook clutter
+                <h3 className="mb-1 font-display text-lg font-semibold text-ink">
+                  Built for Florida’s tax rules
                 </h3>
-                <p className="text-sm leading-relaxed text-white/70">
-                  Price the ticket first. Decide where to bet second. Educational tool only — we do
-                  not take wagers.
+                <p className="text-sm leading-relaxed text-ink/70">
+                  State and local income tax lines stay at zero so estimates match what Sunshine
+                  State workers actually see.
                 </p>
               </li>
               <li>
-                <h3 className="mb-1 font-display text-lg font-semibold text-white">
-                  Honest implied probability
+                <h3 className="mb-1 font-display text-lg font-semibold text-ink">
+                  Hourly and salary in one place
                 </h3>
-                <p className="text-sm leading-relaxed text-white/70">
-                  Big American numbers look exciting. Win-probability % keeps long parlays in
-                  perspective.
+                <p className="text-sm leading-relaxed text-ink/70">
+                  Switch modes without jumping between unrelated national calculators that bury
+                  Florida context.
                 </p>
               </li>
               <li>
-                <h3 className="mb-1 font-display text-lg font-semibold text-white">
-                  Related tools that match real searches
+                <h3 className="mb-1 font-display text-lg font-semibold text-ink">
+                  Transparent educational math
                 </h3>
-                <p className="text-sm leading-relaxed text-white/70">
-                  NFL, moneyline, and round robin pages cover modifier keywords without thin
-                  duplicate calculators.
+                <p className="text-sm leading-relaxed text-ink/70">
+                  We show every major line: federal, Social Security, Medicare, and $0 Florida tax.
+                  Not a payroll vendor upsell page.
                 </p>
               </li>
             </ul>
-            <p className="mt-6 text-sm text-white/70">
-              Step-by-step product walkthrough:{" "}
-              <Link href="/how-it-works" className="text-violet-soft underline">
-                how Parlay Calculator works
+            <p className="mt-6 text-sm text-ink/70">
+              Step-by-step walkthrough:{" "}
+              <Link href="/how-it-works" className="text-violet underline">
+                how Florida Paycheck Calculator works
               </Link>
               .
             </p>
           </div>
         </section>
 
-        <FaqSection title="Parlay calculator FAQs" items={faqs} includeSchema={false} />
+        <section className="mb-16 max-w-3xl">
+          <h2 className="mb-4 font-display text-2xl font-bold text-ink md:text-3xl">
+            Who this Florida net pay calculator helps
+          </h2>
+          <p className="mb-4 leading-relaxed text-ink/80">
+            Job seekers comparing offers, hourly employees checking overtime weeks, remote workers
+            relocating to Florida, and anyone budgeting rent or savings against real take-home pay.
+            Small business owners can also sanity-check employee net pay before running payroll
+            software—while remembering this site is an estimator, not ADP or Gusto.
+          </p>
+          <p className="leading-relaxed text-ink/75">
+            Compare feature details on our{" "}
+            <Link href="/features" className="text-violet underline">
+              features page
+            </Link>
+            , or contact us if you spot a calculation edge case we should document.
+          </p>
+        </section>
 
-        <section className="mt-16 border-t border-white/10 pt-12 text-center">
+        <FaqSection title="Florida paycheck calculator FAQs" items={faqs} includeSchema={false} />
+
+        <section className="mt-16 border-t border-ink/10 pt-12 text-center">
           <div className="relative mx-auto mb-6 h-16 w-16">
             <Image src={BRAND_LOGO} alt="" width={64} height={64} className="object-contain" />
           </div>
-          <h2 className="mb-3 font-display text-2xl font-bold text-white md:text-3xl">
-            Ready to price your next parlay?
+          <h2 className="mb-3 font-display text-2xl font-bold text-ink md:text-3xl">
+            Ready to estimate your Florida take-home pay?
           </h2>
-          <p className="mx-auto mb-8 max-w-xl text-white/75">
-            Scroll up to the free calculator, stack your legs, and know the payout before you bet.
+          <p className="mx-auto mb-8 max-w-xl text-ink/75">
+            Scroll up to the free calculator, enter salary or hourly wages, and see net pay with $0
+            Florida state tax.
           </p>
-          <CtaButton href="/#calculator" ariaLabel="Back to parlay calculator" icon="arrow">
+          <CtaButton href="/#calculator" ariaLabel="Back to Florida paycheck calculator" icon="arrow">
             BACK TO CALCULATOR
           </CtaButton>
         </section>

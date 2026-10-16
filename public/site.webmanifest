@@ -1,11 +1,11 @@
 {
-  "name": "Parlay Calculator",
-  "short_name": "Parlay",
+  "name": "Florida Paycheck Calculator",
+  "short_name": "FL Paycheck",
   "icons": [
     {"src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png"},
     {"src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png"}
   ],
-  "theme_color": "#C6F432",
-  "background_color": "#080F1C",
+  "theme_color": "#FF7A2F",
+  "background_color": "#FFF7EC",
   "display": "standalone"
 }

@@ -1,18 +1,14 @@
-# Parlay Calculator
+# Florida Paycheck Calculator
 
-Free sports betting **parlay calculator** for [parlaycalculator.net](https://parlaycalculator.net).
+Free Florida take-home pay estimator at [floridapaycheckcalculator.io](https://floridapaycheckcalculator.io).
 
 ## Features
 
-- American, decimal, and fractional odds
-- Multi-leg payout, profit, and implied probability
-- NFL & moneyline calculator landers
-- Round robin bet calculator
-- SERP-backed guides (how to calculate parlay odds, what is a parlay, odds explained)
-
-## Stack
-
-- Next.js (App Router) + TypeScript + Tailwind CSS
+- Hourly and salary paycheck modes
+- Weekly, biweekly, semi-monthly, monthly, and annual frequencies
+- Federal income tax + FICA estimates
+- Explicit $0 Florida state and local income tax
+- Guides for state tax, withholding, hourly pay, and 401(k) impact
 
 ## Develop
 
@@ -27,9 +23,3 @@ npm run dev
 npm run build
 npm start
 ```
-
-## SEO notes
-
-- Primary keyword: `parlay calculator`
-- Canonical host: `https://parlaycalculator.net`
-- Sitemap index: `/sitemap-index.xml`

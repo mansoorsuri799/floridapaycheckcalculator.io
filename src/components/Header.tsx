@@ -8,10 +8,11 @@ import { BRAND_LOGO_MARK, SITE_NAME } from '@/lib/siteConfig';
 
 const navLinks = [
   { href: '/', label: 'Calculator' },
+  { href: '/hourly-paycheck-calculator', label: 'Hourly' },
+  { href: '/salary-paycheck-calculator', label: 'Salary' },
+  { href: '/biweekly-paycheck-calculator', label: 'Biweekly' },
   { href: '/features', label: 'Features' },
   { href: '/how-it-works', label: 'How It Works' },
-  { href: '/nfl-parlay-calculator', label: 'NFL' },
-  { href: '/round-robin-calculator', label: 'Round Robin' },
   { href: '/blog', label: 'Blog' },
   { href: '/about-us', label: 'About' },
   { href: '/contact-us', label: 'Contact' },
@@ -26,20 +27,20 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-brand/85 py-2 px-3 backdrop-blur-md sm:py-3 sm:px-4 md:px-8">
+    <header className="sticky top-0 z-40 border-b border-ink/10 bg-brand/90 py-2 px-3 backdrop-blur-md sm:py-3 sm:px-4 md:px-8">
       <div className="container mx-auto flex justify-between items-center gap-3">
         <Link href="/" className="flex items-center min-w-0">
           <div className="relative h-8 w-8 sm:h-9 sm:w-9 mr-2 flex-shrink-0">
             <Image
               src={BRAND_LOGO_MARK}
-              alt="Parlay Calculator logo"
+              alt="Florida Paycheck Calculator logo"
               width={40}
               height={40}
               className="object-contain"
               priority
             />
           </div>
-          <span className="truncate font-display text-sm sm:text-base md:text-lg font-bold leading-tight text-white">
+          <span className="truncate font-display text-sm sm:text-base md:text-lg font-bold leading-tight text-ink">
             {SITE_NAME}
           </span>
         </Link>
@@ -49,8 +50,8 @@ export default function Header() {
             <Link
               key={href}
               href={href}
-              className={`relative font-medium transition-colors pb-1 group text-sm text-white/80 ${
-                isActive(href) ? 'font-semibold text-white' : 'hover:text-violet-soft'
+              className={`relative font-medium transition-colors pb-1 group text-sm text-ink/75 ${
+                isActive(href) ? 'font-semibold text-ink' : 'hover:text-violet'
               }`}
             >
               {label}
@@ -66,7 +67,7 @@ export default function Header() {
         <div className="hidden xl:block">
           <Link
             href="/#calculator"
-            className="inline-flex items-center rounded-xl bg-gradient-to-r from-violet to-teal px-4 py-2 text-sm font-semibold text-brand-deep shadow-[0_10px_28px_-12px_rgba(198,244,50,0.9)] transition hover:brightness-110"
+            className="inline-flex items-center rounded-xl bg-gradient-to-r from-violet to-pink-deep px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_28px_-12px_rgba(255,122,47,0.9)] transition hover:brightness-110"
           >
             Open calculator
           </Link>

@@ -7,119 +7,105 @@ import FaqSection from "@/components/FaqSection";
 import { BRAND_FEATURE_3, OG_IMAGE, SITE_NAME, SITE_ORIGIN } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "How Parlay Calculator Works — Odds Math Explained",
+  title: "How It Works — Florida Paycheck Calculator",
   description:
-    "Learn how Parlay Calculator converts odds, multiplies legs, and returns profit, payout, and implied probability for any multi-leg sports bet.",
+    "Learn how Florida Paycheck Calculator estimates take-home pay: gross wages, pre-tax deductions, federal tax, FICA, and $0 Florida state tax.",
   alternates: { canonical: `${SITE_ORIGIN}/how-it-works` },
   openGraph: {
-    title: "How Parlay Calculator Works — Odds Math Explained",
-    description: "Step-by-step: from stake and legs to combined parlay odds and payout.",
+    title: "How It Works — Florida Paycheck Calculator",
+    description: "Step-by-step: from wages to Florida net pay.",
     url: `${SITE_ORIGIN}/how-it-works`,
     siteName: SITE_NAME,
     type: "website",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "How Parlay Calculator works" }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "How Florida Paycheck Calculator works" }],
   },
 };
 
 const faqs = [
   {
-    question: "How are American odds converted?",
+    question: "Does this use IRS Publication 15-T Exact Method tables?",
     answer:
-      "Positive American odds: decimal = (odds ÷ 100) + 1. Negative American odds: decimal = (100 ÷ |odds|) + 1. Those decimals are multiplied across legs.",
+      "No. We use an educational annualization approach with approximate brackets and standard deduction. Employer payroll systems use official IRS tables and your exact W-4.",
   },
   {
-    question: "Why might my sportsbook show a different number?",
+    question: "Why might my real stub differ?",
     answer:
-      "Books can apply parlay juice, reduced vig on SGP, or boosted prices. Our calculator shows standard multiplicative odds — always confirm the price on the ticket before betting.",
+      "Year-to-date wages, bonuses, multiple jobs, supplemental rates, local benefits, garnishments, and W-4 elections can change withholding. Always treat our output as an estimate.",
   },
 ];
 
 const steps = [
   {
-    title: "1. Match the odds format",
-    body: "Choose American, decimal, or fractional so each leg parses the way your sportsbook displays it.",
+    title: "1. Capture gross pay",
+    body: "Salary is divided by periods per year. Hourly pay is rate × weekly hours × 52, then divided by your selected frequency.",
   },
   {
-    title: "2. Enter stake and legs",
-    body: "Add every selection on the ticket. Optional labels keep NFL games or props organized while you tweak prices.",
+    title: "2. Apply pre-tax deductions",
+    body: "Annual pre-tax amounts (for example 401(k) or HSA) reduce estimated federal taxable wages and FICA wages in our model.",
   },
   {
-    title: "3. Multiply decimal odds",
-    body: "Behind the scenes, each price becomes a decimal multiplier. The product is your combined decimal odds.",
+    title: "3. Estimate federal income tax",
+    body: "We subtract an approximate standard deduction, apply federal brackets for your filing status, then spread the annual tax across pay periods.",
   },
   {
-    title: "4. Apply stake for payout",
-    body: "Total payout = stake × combined decimal. Profit = payout − stake. Implied probability = 1 ÷ combined decimal.",
+    title: "4. Add FICA and Florida zeros",
+    body: "Social Security (6.2% up to wage base) and Medicare (1.45%, plus Additional Medicare when applicable) are included. Florida state and local income tax stay $0.",
   },
 ];
 
 export default function HowItWorksPage() {
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: "How to calculate a parlay with Parlay Calculator",
-    description: "Convert odds, multiply legs, and read payout.",
-    step: steps.map((s, i) => ({
-      "@type": "HowToStep",
-      position: i + 1,
-      name: s.title,
-      text: s.body,
-    })),
-  };
-
   return (
     <>
-      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "How It Works", href: "/how-it-works" }]} />
-      <div className="container mx-auto max-w-4xl px-4 pb-10 pt-8">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      <Breadcrumbs
+        items={[{ label: "Home", href: "/" }, { label: "How It Works", href: "/how-it-works" }]}
       />
-      <h1 className="mb-3 font-display text-3xl font-bold text-white md:text-4xl">
-        How the parlay calculator works
-      </h1>
-      <p className="mb-8 text-lg text-white/80">
-        Parlays pay more because every leg must win. The math is multiplicative — convert each price
-        to decimal odds, multiply, then scale by stake. That is exactly what this tool automates.
-      </p>
+      <div className="container mx-auto max-w-4xl px-4 pb-12 pt-6">
+        <h1 className="mb-3 font-display text-3xl font-bold text-ink md:text-4xl">
+          How Florida Paycheck Calculator works
+        </h1>
+        <p className="mb-10 text-lg text-ink/75">
+          Transparent math for Florida take-home estimates — not a black-box payroll pitch.
+        </p>
 
-      <div className="relative mb-10 aspect-video overflow-hidden rounded-2xl border border-white/10">
-        <Image
-          src={BRAND_FEATURE_3}
-          alt="Diagram-style view of converting odds and multiplying parlay legs"
-          fill
-          sizes="100vw"
-          className="object-cover"
-          priority
-        />
-      </div>
+        <div className="relative mb-12 aspect-video overflow-hidden rounded-2xl border border-ink/10">
+          <Image
+            src={BRAND_FEATURE_3}
+            alt="Diagram-style view of Florida paycheck calculation steps"
+            fill
+            sizes="(max-width: 768px) 100vw, 800px"
+            className="object-cover"
+            priority
+          />
+        </div>
 
-      <ol className="mb-12 space-y-8">
-        {steps.map((step) => (
-          <li key={step.title} className="border-l-2 border-violet/50 pl-5">
-            <h2 className="mb-2 font-display text-xl font-semibold text-white">{step.title}</h2>
-            <p className="text-white/75 leading-relaxed">{step.body}</p>
-          </li>
-        ))}
-      </ol>
+        <ol className="mb-12 space-y-8">
+          {steps.map((step) => (
+            <li key={step.title}>
+              <h2 className="mb-2 font-display text-2xl font-bold text-ink">{step.title}</h2>
+              <p className="leading-relaxed text-ink/75">{step.body}</p>
+            </li>
+          ))}
+        </ol>
 
-      <p className="mb-8 text-white/80">
-        Want the long-form formula with worked NFL examples? Read{" "}
-        <Link href="/blog/how-to-calculate-parlay-odds" className="text-violet-soft underline">
-          how to calculate parlay odds
-        </Link>{" "}
-        or open the{" "}
-        <Link href="/#calculator" className="text-violet-soft underline">
-          free calculator
-        </Link>
-        .
-      </p>
+        <p className="mb-8 leading-relaxed text-ink/75">
+          For tax-context reading, see{" "}
+          <Link href="/blog/how-florida-paycheck-taxes-work" className="text-violet underline">
+            how Florida paycheck taxes work
+          </Link>{" "}
+          and{" "}
+          <Link href="/blog/does-florida-have-state-income-tax" className="text-violet underline">
+            does Florida have state income tax
+          </Link>
+          .
+        </p>
 
-      <FaqSection title="How-it-works FAQs" items={faqs} />
+        <FaqSection title="How-it-works FAQs" items={faqs} />
 
-      <div className="mt-12 text-center">
-        <CtaButton href="/#calculator">TRY IT FREE</CtaButton>
-      </div>
+        <div className="mt-12 text-center">
+          <CtaButton href="/#calculator" ariaLabel="Open Florida paycheck calculator">
+            OPEN CALCULATOR
+          </CtaButton>
+        </div>
       </div>
     </>
   );

@@ -1,34 +1,26 @@
-# Parlay Calculator SEO Strategy
+# SEO Strategy — Florida Paycheck Calculator
 
-**Domain:** https://parlaycalculator.net  
-**Primary keyword:** parlay calculator (≈64K US monthly)
+**Primary keyword:** Florida Paycheck Calculator  
+**Domain:** floridapaycheckcalculator.io
 
-## Keyword map
+## SERP competitors (research Oct 2026)
 
-| Intent | Keyword (vol) | URL |
-|--------|---------------|-----|
-| Tool (primary) | parlay calculator (64K) | `/` |
-| Tool variants | parlay odds / payout / bet calculator | `/` (+ redirects) |
-| Modifier | nfl parlay calculator (900) | `/nfl-parlay-calculator` |
-| Modifier | moneyline parlay calculator (800) | `/moneyline-parlay-calculator` |
-| Tool | round robin bet calculator (450) | `/round-robin-calculator` |
-| Informational | how to calculate parlay odds (710) | `/blog/how-to-calculate-parlay-odds` |
-| Informational | what is a parlay bet | `/blog/what-is-a-parlay-bet` |
-| Informational | parlay odds (2.2K) | `/blog/parlay-odds-explained` |
+1. ADP Florida paycheck calculator  
+2. SmartAsset Florida paycheck calculator  
+3. PaycheckCity Florida salary / hourly  
+4. Gusto Florida hourly  
+5. PaycheckManager / OnPay
 
-Skipped for v1: `kalkulator parlay` (Indonesia) — English-first site.
+## Content gaps we own
 
-## Competitive gaps we own
+- Explicit $0 Florida state + local tax lines (not buried)
+- Hourly + salary + biweekly dedicated landers without payroll upsell clutter
+- SERP-backed blogs only (state tax, FICA/withholding, hourly, 401k)
+- Educational HowTo + FAQ schema on the hub page
 
-- Clean free tool without sportsbook soft-sell clutter
-- American + decimal + fractional in one calculator
-- Dedicated round robin + NFL + moneyline landers
-- Original how-to with formula + worked examples
-- Custom trust pages + FAQ/HowTo/SoftwareApplication schema
+## Blog set (search-backed)
 
-## Technical
-
-- Canonicals, OG, Twitter on all indexable pages
-- `/sitemap-index.xml` → `index.xml` + `image-sitemap.xml`
-- Robots Content-Signal + AI bot blocks
-- Visible ratings match AggregateRating schema
+1. Does Florida have state income tax?  
+2. How Florida paycheck taxes work  
+3. Florida hourly paycheck explained  
+4. How a 401(k) affects your Florida paycheck
